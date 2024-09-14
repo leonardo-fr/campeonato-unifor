@@ -35,4 +35,5 @@ def applyReduction(function, users, deduction, workGroup):
 def reduction(user, deduction, workGroup):
     if user["workGroup"] == workGroup:
         return {**user, "score": user["score"] - deduction}
+    #Duplo asterisco garante a imutabilidade do dicionário original
     return {**user}
