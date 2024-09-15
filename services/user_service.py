@@ -17,7 +17,7 @@ def usersWithExtraPoints(users, extraScores):
 
     return usersWithExtra
 
-#clojures
+#closure
 def totalTeamScore(users):
     def totalTeam(workGroup):
         groupMembers = [user for user in users if user['workGroup'] == workGroup]
@@ -25,12 +25,13 @@ def totalTeamScore(users):
 
     return totalTeam
 
-#higher-order function
+#higher-order function (função de alta ordem)
 def applyReduction(function, users, deduction, workGroup):
     return [function(user, deduction, workGroup) for user in users]
 
 def reduction(user, deduction, workGroup):
     if user["workGroup"] == workGroup:
         return {**user, "score": user["score"] - deduction}
+
     #Duplo asterisco garante a imutabilidade do dicionário original
     return {**user}
