@@ -9,7 +9,7 @@ def filterUsersByScore(users, minScore):
 #list comprehension
 def usersWithExtraPoints(users, extraScores):
     usersName = [user['name'] for user in users]
-    scoresWithExtra = [min(user['score'] + extraScores,100) for user in users if user['score'] + extraScores]
+    scoresWithExtra = [min(user['score'] + extraScores,100) for user in users]
     workGroups = [user['workGroup'] for user in users]
 
     props = zip(usersName, scoresWithExtra, workGroups)
