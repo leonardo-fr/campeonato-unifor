@@ -1,6 +1,3 @@
-
-
-
 #lambda funcion
 def filterUsersByScore(users, minScore):
     filteredUsersIterator = filter(lambda user: user['score'] >= minScore, users)
